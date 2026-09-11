@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Rafael Lozano-Hemmer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Obras - Rafael Lozano-Hemmer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css./estilos.css">
 </head>
 <body>
-        <!-- contenedor principal para centrar la página -->
+
     <div class="contenedor">
+
+        <!-- Encabezado y menú principal -->
         <header>
             <h1>Rafael Lozano-Hemmer</h1>
             <h2>Interactividad, espacio público y arte tecnológico</h2>
@@ -20,11 +22,51 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="pagina2.html">Obras</a></li>
-                    <li><a href="pagina3.html">Java</a></li>
+                    <li><a href="pagina3.html">Sistema Luces</a></li>
                 </ul>
             </nav>
         </header>
 
-    <script src="./js/archivo.js"></script>
+<!-- layout de las 2 columnas -->
+<main class="columnas-contenedor">
+            
+            <!-- columna Izquierda (angosta): textos y conceptos -->
+            <aside class="columna columna-angosta">
+                <h2>Sistemas interactivos y tecnología en tiempo real</h2>
+                <p>El trabajo de Rafael Lozano-Hemmer se basa en el desarrollo de sistemas tecnológicos que reaccionan a la presencia humana. Utiliza dispositivos como cámaras, micrófonos y sensores biométricos para captar información del entorno.</p>
+                <p>Estas obras funcionan en tiempo real, generando una relación directa entre acción y resultado. El público no solo observa, sino que influye activamente en el comportamiento de la obra.</p>
+
+                <h3>Conceptos clave</h3>
+                <ul>
+                    <li>Interactividad</li>
+                    <li>Arte en espacio público</li>
+                    <li>Biometría y sensores</li>
+                    <li>Sistemas en tiempo real</li>
+                </ul>
+            </aside>
+
+            <!-- columna derecha (más ancha): galería y botón -->
+            <article class="columna columna-ancha">
+
+                <h2>Galería de obras destacadas</h2>
+                <button id="btn-vista">Click para cambiar el color</button>
+                <!-- Div donde JS insertará las 5 obras -->
+                <div id="contenedor-galeria"></div>
+
+                <!-- Botón ubicado abajo de las imágenes -->
+                <div class="panel-galeria">
+        
+            </article>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>Para contactarse escribir a <a href="mailto:rafael@artedigital.com">rafael@artedigital.com</a></p>
+        </footer>
+
+    </div>
+    <!-- Vinculación del script de la galería -->
+    <script src="./js/galeria.js"></script>
 </body>
 </html>
