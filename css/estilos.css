@@ -1,6 +1,96 @@
+/* selector universal para que no desborde */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url('../img/fondo.png');
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 0; /* margen vertical para dejar ver el fondo*/
 }
-h1,h2,h3 {
-    font-family: "barlow";
+h1,h2,h3 { font-family: "barlow"; }
+
+.contenedor {
+    width: 90%;
+    max-width: 75rem;
+    background-color: rgba(255, 255, 255, 0.92); /* un poco de transparencia */
+    padding: 2rem;
 }
+
+/* encabezado y menu de navegación */
+header { text-align: center; margin-bottom: 2rem; }
+
+header h1 {
+    font-size: 3rem; 
+    margin-bottom: 0.5rem; /* separa el h1 del h2 */
+}
+
+/* subtítulo */
+header h2 {
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; /* separa el subtítulo del nav */
+}
+
+/* navegación y menú horizontal  */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* separa los ítems del menú con margin */
+nav li { margin: 0 1rem; }
+
+/* agranda el texto y le da formato visual de botón */
+nav a {
+    text-decoration: none;
+    font-size: 1rem; 
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* espacio interno alrededor de cada palabra */
+}
+/* estilo al pasar el mouse por encima */
+nav a:hover { background-color: #038bca; color: white;}
+
+/* contenedor de las 3 columnas */
+.columnas-contenedor {
+    display: flex;
+    align-items: stretch; /* alturas iguales */
+}
+/* separación de los títulos y párrafos */
+.columna h2 { margin-bottom: 0.75rem; }
+.columna h3 { margin-top: 1rem; margin-bottom: 0.5rem; }
+.columna p { margin-bottom: 0.75rem; }
+
+/* estilo de las columnas */
+.columna {
+    background-color: white; /* fondo blanco para las tarjetas */
+    padding: 1.5rem;
+    margin: 0 1rem; /* Espacio horizontal entre columnas */
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.columna:hover { background-color: #038bca; color: white; }
+
+/* columnas laterales izq. y der. */
+aside.columna { flex: 1; }
+
+/* COLUMNA CENTRAL (Más ancha) */
+article.columna { flex: 2; }
+
+/* saca los márgenes en los extremos de afuera */
+.columna:first-child { margin-left: 0; }
+.columna:last-child { margin-right: 0; }
+
+/* ajustes de la imagen para que no se vaya a cualquier lado */
+.columna img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+/* pie de página */
+footer {padding-top: 3rem; text-align: center;}
