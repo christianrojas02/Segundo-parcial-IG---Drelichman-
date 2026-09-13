@@ -1,3 +1,4 @@
+// boton que genera un dato
 //  hago un array con todos los datos
 let datosRandom = [
     "Rafael Lozano-Hemmer es un artista mexicano-canadiense especializado en instalaciones interactivas en espacios públicos.",
