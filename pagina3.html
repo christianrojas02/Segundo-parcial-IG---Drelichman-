@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Rafael Lozano-Hemmer</title>
+	<title>Ejercicio - Rafael Lozano-Hemmer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -20,11 +20,89 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="pagina2.html">Obras</a></li>
-                    <li><a href="pagina3.html">Java</a></li>
+                    <li><a href="pagina3.html">Sistema de luces</a></li>
                 </ul>
             </nav>
         </header>
 
-    <script src="./js/archivo.js"></script>
+        <!-- CONTENEDOR PARA LAS 2 COLUMNAS -->
+        <main class="columnas-contenedor">
+
+            <!-- COLUMNA 1: texto que faltaba e imagen -->
+            <article class="columna columna-texto">
+                <section>
+                    <h2>Tecnología y crítica social</h2>
+                    <p>El uso de tecnología en su trabajo no es neutral, sino que se vincula con una mirada crítica sobre temas contemporáneos. Sus obras abordan problemáticas como la vigilancia masiva, el control de datos y la exposición de la identidad en espacios públicos.</p>
+                    <p>A través de estas propuestas, invita a reflexionar sobre cómo las tecnologías afectan la vida cotidiana. La interacción se convierte en una herramienta para visibilizar estas tensiones y cuestionar su impacto en la sociedad.</p>
+                    
+                    <img src="./img/lozano-hemmer-3.jpg" alt="Instalación interactiva de Rafael Lozano-Hemmer">
+                </section>
+
+                <section>
+                    <h2>Espacio público y experiencia colectiva</h2>
+                    <p>Muchas de sus instalaciones se desarrollan en espacios urbanos, lo que permite ampliar el alcance del arte más allá de los ámbitos tradicionales. Estas intervenciones transforman el paisaje cotidiano en un entorno de experimentación.</p>
+                    <p>El carácter colectivo de estas obras genera experiencias compartidas entre desconocidos, promoviendo nuevas formas de interacción social. El espacio público se convierte así en un lugar de encuentro donde arte, tecnología y comunidad se entrelazan.</p>
+                </section>
+            </article>
+
+            <!-- COLUMNA 2: Calculadora - resolución del ejercicio -->
+            <aside class="columna columna-ejercicio">
+                <section>
+                    <h2>¿Cuánto se gastó? &#x1F914;...</h2>
+                    <p>Completá los datos para calcular el consumo y costos del sistema de iluminación.</p>
+                    
+                    <!-- PRIMER FORM: datos generales de la tarifa y cantidad de obras -->
+                    <form id="form-configuracion">
+                        <fieldset id="fieldset-configuracion">
+                            <label for="cant-obras">Cantidad de obras a desarrollar:</label><br>
+                            <input type="number" min="1" id="cant-obras"><br>
+
+                            <label for="consumo-horas">Consumo por hora de cada luz (kWh):</label><br>
+                            <input type="number" min="0.01" step="0.01" id="consumo-horas"><br>
+
+                            <label for="costo-kwh">Costo por kWh ($):</label><br>
+                            <input type="number" min="0.01" step="0.01" id="costo-kwh"><br><br>
+
+                            <button type="button" id="btn-iniciar">Confirmar Datos</button>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Carga de Obras</h2>
+                    <p id="contador">Obras cargadas: 0</p>
+                    
+                    <!-- SEGUNDO FORM: Carga de cada obra dentro de un fieldset -->
+                    <form id="ingresar-obras">
+                        <fieldset id="fieldset-obras" disabled>
+                            <label for="nombre-obra">Nombre de la Obra:</label><br>
+                            <input type="text" id="nombre-obra"><br>
+
+                            <label for="cantidad-luz">Luces móviles que utiliza:</label><br>
+                            <input type="number" min="0" id="cantidad-luz"><br>
+
+                            <label for="tiempo-dia">Tiempo de funcionamiento por día (horas):</label><br>
+                            <input type="number" min="0.1" max="24" step="0.1" id="tiempo-dia"><br><br>
+
+                            <button type="button" id="btn-agregar-obra">Agregar Obra</button>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <section id="seccion-resultados">
+                    <h2>Acciones y resultados</h2>
+                    
+                    <!-- Botones de control -->
+                    <button type="button" id="btn-calcular" disabled>Calcular Resultados</button>
+                    <button type="button" id="btn-reiniciar" disabled>Reiniciar</button>
+
+                    <!-- Contenedor donde js pone las respuestas -->
+                    <div id="resultados"></div>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <script src="./js/ejercicio.js"></script>
 </body>
 </html>
